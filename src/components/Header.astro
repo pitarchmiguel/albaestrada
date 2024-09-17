@@ -1,0 +1,92 @@
+<header class="flex flex-col justify-around relative">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Video ajustado para ocupar el 100% del viewport height en mobile -->
+    <video autoplay muted loop class="w-full h-screen object-cover">
+      <source src="https://cdn.prod.website-files.com/61c2f086d385db179866da52%2F66bf675f6cef5b1f7501c035_HWPO-Hero-Reel-transcode.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navegación fija -->
+    <!-- Menú de navegación -->
+<div class="fixed top-0 z-50 w-full p-4 bg-black bg-opacity-70">
+    <div class="flex justify-between items-center">
+      <img src="/src/assets/logo.png" alt="logo" class="w-16 md:w-20">
+  
+      <!-- Icono de hamburguesa (visible en móviles) -->
+      <button id="menu-toggle" class="block md:hidden focus:outline-none">
+        <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+  
+      <!-- Navegación (visible en desktop, oculta en móvil) -->
+      <nav class="hidden md:flex">
+        <ul class="flex flex-row space-x-4 md:space-x-6 text-zinc-50 text-sm md:text-lg">
+          <li class="p-3 uppercase font-bold hover:text-zinc-400 ease-out duration-300"><a href="#programas">Programas</a></li>
+          <li class="p-3 uppercase font-bold hover:text-zinc-400 ease-out duration-300"><a href="#biografia">Biografía</a></li>
+          <li class="p-3 uppercase font-bold hover:text-zinc-400 ease-out duration-300"><a href="#">Mi libro</a></li>
+          <li class="p-3 uppercase font-bold hover:text-zinc-400 ease-out duration-300"><a href="#">Formaciones</a></li>
+          <li class="p-3 uppercase font-bold hover:text-zinc-400 ease-out duration-300"><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  
+    <!-- Menú hamburguesa desplegable (visible en móviles) -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center">
+      
+      <!-- Botón de cierre (X) -->
+      <button id="menu-close" class="absolute top-5 right-5 text-white focus:outline-none">
+        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+  
+      <ul class="space-y-6 text-lg text-center">
+        <li class="uppercase font-bold"><a href="#programas" class="menu-link hover:text-zinc-400 ease-out duration-300">Programas</a></li>
+        <li class="uppercase font-bold"><a href="#biografia" class="menu-link hover:text-zinc-400 ease-out duration-300">Biografía</a></li>
+        <li class="uppercase font-bold"><a href="#" class="menu-link hover:text-zinc-400 ease-out duration-300">Mi libro</a></li>
+        <li class="uppercase font-bold"><a href="#" class="menu-link hover:text-zinc-400 ease-out duration-300">Formaciones</a></li>
+        <li class="uppercase font-bold"><a href="#" class="menu-link hover:text-zinc-400 ease-out duration-300">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- JavaScript para alternar el menú hamburguesa y cerrar el menú -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuClose = document.getElementById('menu-close');
+    const menuLinks = document.querySelectorAll('.menu-link');
+  
+    // Abrir el menú hamburguesa
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+  
+    // Cerrar el menú hamburguesa con el botón de X
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  
+    // Cerrar el menú al hacer clic en un enlace del menú
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+  
+
+    <!-- Contenido principal -->
+    <div class="absolute left-4 sm:left-10 md:left-20 text-white w-full sm:w-auto md:w-[600px] sm:px-4 md:px-0 sm:text-left">
+      <h1 class="text-2xl md:text-3xl font-extrabold uppercase text-zinc-400 py-2 md:py-5">Alba Estrada</h1>
+      <h2 class="text-4xl md:text-5xl font-extrabold uppercase">Construye la mejor versión de ti mismo</h2>
+      <h3 class="text-lg md:text-2xl font-extrabold uppercase text-zinc-400 py-2 md:py-3">Únete a nuestra comunidad de atletas</h3>
+      <p class="text-sm md:text-lg">Training Norte trabaja para mejorar los entrenamientos de Cross Training. Nuestro objetivo es que cada uno de nuestros atletas pueda alcanzar su máximo rendimiento.</p>
+      <button class="mt-5 md:mt-7 uppercase text-sm md:text-lg font-extrabold w-auto px-8 md:px-14 py-3 md:py-4 
+      text-slate-950 bg-white hover:bg-transparent hover:text-white 
+      border border-transparent hover:border-white border-solid ease-in-out duration-300">
+        Elige tu plan
+      </button>
+    </div>
+</header>
