@@ -4,10 +4,10 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'program-1': "url('../../public/assets/program1.jpg')",
-				'program-2': "url('../../public/assets/program2.jpg')",
-				'program-3': "url('../../public/assets/program3.jpg')",
-			},
+				'program-1': "url('/assets/program1.jpg')",
+				'program-2': "url('/assets/program2.jpg')",
+				'program-3': "url('/assets/program3.jpg')",
+			  },
 			borderRadius: {
 				'lg': '1.5rem',
 			},
