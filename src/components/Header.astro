@@ -79,9 +79,9 @@
 
     <!-- Contenido principal -->
     <div class="absolute mx-4 md:left-20 text-white  sm:w-auto md:w-[600px] sm:px-4 md:px-0 sm:text-left">
-      <h1 class="text-2xl md:text-3xl font-extrabold uppercase text-zinc-400 py-2 md:py-5">Alba Estrada</h1>
-      <h2 class="text-4xl md:text-5xl font-extrabold uppercase tracking-tighter">Construye la mejor versión de ti mismo</h2>
-      <h3 class="text-lg md:text-2xl font-extrabold uppercase text-zinc-400 py-2 md:py-3">Únete a nuestra comunidad de atletas</h3>
+      <h1 class="fuente text-2xl md:text-3xl font-extrabold uppercase text-zinc-400 py-2 md:py-5">Alba Estrada</h1>
+      <h2 class="fuente text-4xl md:text-7xl font-extrabold uppercase tracking-tighter ">Construye la mejor versión de ti mismo</h2>
+      <h3 class="fuente text-lg md:text-2xl font-extrabold uppercase text-zinc-400 py-2 md:py-3">Únete a nuestra comunidad de atletas</h3>
       <p class="text-lg p-2 mt-16 md:text-lg">Training Norte trabaja para mejorar los entrenamientos de Cross Training. Nuestro objetivo es que cada uno de nuestros atletas pueda alcanzar su máximo rendimiento.</p>
       <button class="mt-9 md:mt-7 uppercase text-sm md:text-lg font-extrabold min-w-full md:px-14 py-3 md:py-4 
       text-slate-950 bg-white hover:bg-transparent hover:text-white 
@@ -90,3 +90,18 @@
       </button>
     </div>
 </header>
+
+<style>
+  /* Registra tu font family personalizada y le indicamos al navegador dónde encontrarla. */
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/public/fonts/proxima-nova.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fuente {
+  font-family: ProximaNova;
+}
+</style>
